@@ -23,7 +23,7 @@ namespace FreeCourse.Services.Catalog.Controllers
             var response = await _courseService.GetByIdAsync(id);
             return CreateActionResultInstance(response);
         }
-
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var response = await _courseService.GetAllAsycn();
