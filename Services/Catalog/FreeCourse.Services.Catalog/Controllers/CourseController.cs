@@ -1,6 +1,8 @@
-﻿using FreeCourse.Services.Catalog.Services;
+﻿using AutoMapper;
+using FreeCourse.Services.Catalog.Dtos.CourseDtos;
+using FreeCourse.Services.Catalog.Models;
+using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Shared.CustomBases;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FreeCourse.Services.Catalog.Controllers
@@ -10,16 +12,19 @@ namespace FreeCourse.Services.Catalog.Controllers
     public class CourseController : CustomBaseController
     {
         private readonly ICourseService _courseService;
+        private readonly IMapper _mapper;
 
-        public CourseController(ICourseService courseService)
+        public CourseController(ICourseService courseService, IMapper mapper)
         {
             _courseService=courseService;
+            _mapper=mapper;
         }
 
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
+            
             var response = await _courseService.GetByIdAsync(id);
             return CreateActionResultInstance(response);
         }
@@ -34,6 +39,14 @@ namespace FreeCourse.Services.Catalog.Controllers
         public async Task<IActionResult> GetAllByUserId(string userId)
         {
             var response = await _courseService.GetByUserId(userId);
+            return CreateActionResultInstance(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CourseCreateDto courseDto)
+        {
+            courseDto.CategoryId = "2";
+            var response = await _courseService.CreateAsync(_mapper.Map<Course>(courseDto));
             return CreateActionResultInstance(response);
         }
     }

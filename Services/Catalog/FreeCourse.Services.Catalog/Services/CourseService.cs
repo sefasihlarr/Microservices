@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using FreeCourse.Services.Catalog.Dtos.CategoryDtos;
 using FreeCourse.Services.Catalog.Dtos.CourseDtos;
 using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Settings;
@@ -8,18 +7,23 @@ using MongoDB.Driver;
 
 namespace FreeCourse.Services.Catalog.Services
 {
-    public class CourseService:ICourseService
+    public class CourseService : ICourseService
     {
         private readonly IMongoCollection<Course> _courseCollection;
         private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
 
-        public CourseService(IMongoCollection<Course> _courseCollection, IMapper mapper, IDatabaseSettings databaseSettings, IMongoCollection<Category> categoryCollection)
+        public CourseService(IMapper mapper, IDatabaseSettings databaseSettings)
         {
-            var clinet = new MongoClient(databaseSettings.ConnnectionString);
-            var database = clinet.GetDatabase(databaseSettings.DatabaseName);
-            _mapper=mapper;
-            _categoryCollection=database.GetCollection<Category>(databaseSettings.CategoryCollectionName);
+            var newconnectionString = "mongodb://localhost:27017";
+            var databasename = "CatalogDb";
+            var client = new MongoClient(newconnectionString);
+            var database = client.GetDatabase(databasename);
+            var CatogoriesCollectionname = "category";
+            var courseCollectionname = "course";
+            _mapper = mapper;
+            _categoryCollection = database.GetCollection<Category>(CatogoriesCollectionname);
+            _courseCollection = database.GetCollection<Course>(courseCollectionname);
         }
 
 
@@ -111,7 +115,7 @@ namespace FreeCourse.Services.Catalog.Services
 
             else
             {
-                return ResponseDto<NoContent>.Fail("No Fail Delete operations",400);
+                return ResponseDto<NoContent>.Fail("No Fail Delete operations", 400);
             }
         }
 

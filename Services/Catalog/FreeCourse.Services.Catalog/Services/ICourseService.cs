@@ -6,7 +6,7 @@ namespace FreeCourse.Services.Catalog.Services
 {
     public interface ICourseService
     {
-        Task<ResponseDto<List<CourseDto>>> GetAllAsycn(); 
+        Task<ResponseDto<List<CourseDto>>> GetAllAsycn();
         Task<ResponseDto<CourseDto>> CreateAsync(Course course);
         Task<ResponseDto<CourseDto>> GetByIdAsync(string id);
         Task<ResponseDto<List<CourseDto>>> GetByUserId(string userId);

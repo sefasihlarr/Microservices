@@ -1,7 +1,4 @@
-﻿using FreeCourse.Services.Catalog.Models;
-using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
-using FreeCourse.Services.Catalog.Dtos.CategoryDtos;
+﻿using FreeCourse.Services.Catalog.Dtos.CategoryDtos;
 using FreeCourse.Services.Catalog.Dtos.FeatureDtos;
 
 namespace FreeCourse.Services.Catalog.Dtos.CourseDtos
