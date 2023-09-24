@@ -15,6 +15,7 @@ namespace FreeCourse.Shared.Dtos
         public int StatusCode { get; private set; }
         [JsonIgnore]
         public bool IsSuccessful { get; set; }
+
         //static factory methottur bunlar 
         public List<string> Errors { get; set; }
 

@@ -1,0 +1,11 @@
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\bin\Debug\net6.0\FreeCourse.Shared.deps.json
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\bin\Debug\net6.0\FreeCourse.Shared.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\bin\Debug\net6.0\FreeCourse.Shared.pdb
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\FreeCourse.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\FreeCourse.Shared.AssemblyInfoInputs.cache
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\FreeCourse.Shared.AssemblyInfo.cs
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\FreeCourse.Shared.csproj.CoreCompileInputs.cache
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\FreeCourse.Shared.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\refint\FreeCourse.Shared.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\FreeCourse.Shared.pdb
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Shared\FreeCourse.Shared\obj\Debug\net6.0\ref\FreeCourse.Shared.dll
