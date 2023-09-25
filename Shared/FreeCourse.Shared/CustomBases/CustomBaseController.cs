@@ -10,8 +10,6 @@ namespace FreeCourse.Shared.CustomBases
             return new ObjectResult(response)
             {
                 StatusCode = response.StatusCode,
-
-
             };
         }
     }

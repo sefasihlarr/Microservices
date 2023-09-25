@@ -3,6 +3,7 @@ using FreeCourse.Services.Catalog.Dtos.CourseDtos;
 using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Shared.CustomBases;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FreeCourse.Services.Catalog.Controllers
@@ -45,9 +46,37 @@ namespace FreeCourse.Services.Catalog.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CourseCreateDto courseDto)
         {
-            courseDto.CategoryId = "2";
             var response = await _courseService.CreateAsync(_mapper.Map<Course>(courseDto));
             return CreateActionResultInstance(response);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(CourseUpdateDto courseDto)
+        {
+            var values = await _courseService.GetByIdAsync(courseDto.Id);
+            if (values!=null)
+            {
+                await _courseService.UpdateAsync(courseDto);
+            }
+
+            return CreateActionResultInstance(values);
+        }
+
+
+        [HttpDelete("[action]/{id}")]
+        public async Task<IActionResult> RemoveAsync(string id)
+        {
+            var response = await _courseService.DeleteAsycn(id);
+
+            if (response.IsSuccessful)
+            {
+                return CreateActionResultInstance(response);
+            }
+
+            else
+            {
+                return CreateActionResultInstance(response);
+            }
         }
     }
 }
