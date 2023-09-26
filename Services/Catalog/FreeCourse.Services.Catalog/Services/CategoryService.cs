@@ -3,7 +3,6 @@ using FreeCourse.Services.Catalog.Dtos.CategoryDtos;
 using FreeCourse.Services.Catalog.Models;
 using FreeCourse.Services.Catalog.Settings;
 using FreeCourse.Shared.Dtos;
-using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace FreeCourse.Services.Catalog.Services
