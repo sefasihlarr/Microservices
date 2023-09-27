@@ -3,6 +3,9 @@ using FreeCourse.Services.Catalog.Services;
 using FreeCourse.Services.Catalog.Settings;
 using Microsoft.Extensions.Options;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Authorization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -20,6 +23,20 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(MapProfile).Assembly);
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.Authority=builder.Configuration["IndetityServerURL"];
+    options.Audience = "resource_catalog";
+    options.RequireHttpsMetadata = false;
+
+});
+
+
+//Burada Controller tarafýnda autorize iþlemlerini filterelemesini otomatik yapýldý
+builder.Services.AddControllers(opt =>
+{
+    opt.Filters.Add(new AuthorizeFilter());
+});
 builder.Services.Configure<DatabaseSettings>(
     builder.Configuration.GetSection("DatabaseSettings"));
 builder.Services.AddSingleton<IDatabaseSettings>(xy =>
@@ -40,7 +57,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllers();
 
 app.Run();

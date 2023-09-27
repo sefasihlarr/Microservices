@@ -47,3 +47,10 @@ C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservic
 C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
 C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\FreeCourse.Shared.dll
 C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\FreeCourse.Shared.pdb
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Catalog\FreeCourse.Services.Catalog\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

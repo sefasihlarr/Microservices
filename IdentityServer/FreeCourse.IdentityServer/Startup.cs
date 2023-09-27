@@ -28,6 +28,8 @@ namespace FreeCourse.IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalApiAuthentication();
+
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -82,6 +84,7 @@ namespace FreeCourse.IdentityServer
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
