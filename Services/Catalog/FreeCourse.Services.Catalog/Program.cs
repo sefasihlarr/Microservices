@@ -25,7 +25,7 @@ builder.Services.AddAutoMapper(typeof(MapProfile).Assembly);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
-    options.Authority=builder.Configuration["IndetityServerURL"];
+    options.Authority=builder.Configuration["IdentityServerURL"];
     options.Audience = "resource_catalog";
     options.RequireHttpsMetadata = false;
 
@@ -37,6 +37,7 @@ builder.Services.AddControllers(opt =>
 {
     opt.Filters.Add(new AuthorizeFilter());
 });
+
 builder.Services.Configure<DatabaseSettings>(
     builder.Configuration.GetSection("DatabaseSettings"));
 builder.Services.AddSingleton<IDatabaseSettings>(xy =>

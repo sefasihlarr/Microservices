@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "GwqhFZsnBShE9KjWMvDNGOuV+NK34Xi/GYD6V6BdZak=",
+  "Source": "FreeCourse.Services.PhotoStock",
+  "BasePath": "_content/FreeCourse.Services.PhotoStock",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FreeCourse.Services.PhotoStock\\wwwroot",
+      "Source": "FreeCourse.Services.PhotoStock",
+      "ContentRoot": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\wwwroot\\",
+      "BasePath": "_content/FreeCourse.Services.PhotoStock",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\wwwroot\\photos\\photo",
+      "SourceId": "FreeCourse.Services.PhotoStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\wwwroot\\",
+      "BasePath": "_content/FreeCourse.Services.PhotoStock",
+      "RelativePath": "photos/photo",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\photo"
+    }
+  ]
+}
