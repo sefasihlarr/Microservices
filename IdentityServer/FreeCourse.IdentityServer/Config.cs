@@ -17,15 +17,22 @@ namespace FreeCourse.IdentityServer
         {
             Scopes = { "catalog_fullpermisssion", "photo_stock_fullpermisssion" }
         },
+
+
+        new ApiResource("resource_basket")
+        {
+            Scopes = { "basket_fullpermisssion" }
+        },
+
         new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
     };
 
         public static IEnumerable<IdentityResource> IdentityResources => new List<IdentityResource>
 {
-    new IdentityResources.OpenId(),
-    new IdentityResources.Profile(),
-    new IdentityResources.Email(),
-    new IdentityResource
+        new IdentityResources.OpenId(),
+        new IdentityResources.Profile(),
+        new IdentityResources.Email(),
+        new IdentityResource
     {
         Name = "roles",
         DisplayName = "Kullanıcı rolleri",
@@ -41,6 +48,8 @@ namespace FreeCourse.IdentityServer
         new ApiScope("catalog_fullpermisssion", "Catalog API"),
         new ApiScope("photo_stock_fullpermisssion", "Photo Stock API"),
         new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
+
+        new ApiScope("basket_fullpermisssion", "Basket API için erişim "),
     };
 
         public static IEnumerable<Client> Clients => new List<Client>
@@ -61,7 +70,7 @@ namespace FreeCourse.IdentityServer
             AllowOfflineAccess = true,
             ClientSecrets = { new Secret("secret".Sha256()) },
             AllowedGrantTypes  =GrantTypes.ResourceOwnerPassword,
-            AllowedScopes = { IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName, "roles" },
+            AllowedScopes = { "basket_fullpermisssion" , IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName, "roles" },
             AccessTokenLifetime = 1*60*60,
             RefreshTokenExpiration = TokenExpiration.Absolute,
             AbsoluteRefreshTokenLifetime =(int)(DateTime.Now.AddDays(60)-DateTime.Now).TotalSeconds,
