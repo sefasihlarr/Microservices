@@ -1,0 +1,98 @@
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# AxoCover is a Code Coverage Tool
+.axoCover/*
+!.axoCover/settings.json
+
+# Coverlet is a free, cross platform Code Coverage Tool
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+# Visual Studio dosyaları
+.vscode/
+.vs/
+bin/
+obj/
+
+# Derleme sonuçları
+*.dll
+*.exe
+*.pdb
+*.dll.config
+
+# NuGet paketleri
+*.nuget.props
+*.paket.references
+paket.dependencies
+paket.lock
+
+# Visual Studio proje dosyaları
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+
+# User-specific dosyalar
+*.suo
+*.user
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Resharper için
+_ReSharper*/
+*.sln.iml
+
+# Rider için
+.idea/
+
+# User-specific MACOSX dosyaları
+.DS_Store
+
+# User-specific dosyalar
+Thumbs.db
+ehthumbs.db
+
+# Paketleme dosyaları
+*.nupkg
+# Çözüm dizinindeki proje dosyaları
+# Bunları açıklama satırına alın eğer sadece bir proje kullanıyorsanız
+# src/**/bin/
+# src/**/obj/
