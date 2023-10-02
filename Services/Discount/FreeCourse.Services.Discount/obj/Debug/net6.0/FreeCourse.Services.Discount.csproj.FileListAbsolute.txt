@@ -30,3 +30,7 @@ C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservic
 C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\obj\Debug\net6.0\FreeCourse.Services.Discount.pdb
 C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\obj\Debug\net6.0\FreeCourse.Services.Discount.genruntimeconfig.cache
 C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\obj\Debug\net6.0\ref\FreeCourse.Services.Discount.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\bin\Debug\net6.0\Dapper.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\bin\Debug\net6.0\Dapper.Contrib.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\bin\Debug\net6.0\FreeCourse.Shared.dll
+C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\Services\Discount\FreeCourse.Services.Discount\bin\Debug\net6.0\FreeCourse.Shared.pdb
