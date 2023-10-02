@@ -47,6 +47,7 @@ publish/
 # Visual Studio dosyaları
 .vscode/
 .vs/
+.vs
 bin/
 obj/
 
