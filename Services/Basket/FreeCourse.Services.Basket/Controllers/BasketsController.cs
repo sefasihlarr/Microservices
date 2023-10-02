@@ -25,7 +25,6 @@ namespace FreeCourse.Services.Basket.Controllers
          public async Task<IActionResult> GetBasket()
         {
           
-
             return CreateActionResultInstance(await _basketService.GetBasket(_identityService.UserId));
         }
 
