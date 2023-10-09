@@ -30,7 +30,7 @@ namespace FreeCourse.Services.Discount.Services
 
         public async Task<ResponseDto<List<Models.Discount>>> GetAll()
         {
-            var discounts = await _dbConnection.QueryAsync<Models.Discount>("Selecet * from discount");
+            var discounts = await _dbConnection.QueryAsync<Models.Discount>("select * from discount");
             return ResponseDto<List<Models.Discount>>.Success(discounts.ToList(), 200);
         }
 
@@ -62,7 +62,7 @@ namespace FreeCourse.Services.Discount.Services
 
         public async Task<ResponseDto<NoContent>> Save(Models.Discount discount)
         {
-            var Savestatus = await _dbConnection.ExecuteAsync("INSET INTO discount(userid,rate,code) VALUES(@UserId,@Rate,@Code)",discount);
+            var Savestatus = await _dbConnection.ExecuteAsync("INSERT INTO discount(userid,rate,code) VALUES(@UserId,@Rate,@Code)",discount);
             if (Savestatus>0)
             {
                 return ResponseDto<NoContent>.Success(204);

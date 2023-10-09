@@ -26,8 +26,6 @@ namespace FreeCourse.Services.Discount.Controllers
         public async Task<IActionResult> GetAll()
         {
             return CreateActionResultInstance(await _discountService.GetAll());
-
-
         }
 
         [HttpGet("{id}")]
