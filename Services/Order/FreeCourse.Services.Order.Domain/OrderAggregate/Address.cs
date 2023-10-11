@@ -24,7 +24,7 @@ namespace FreeCourse.Services.Order.Domain.OrderAggregate
         public string Street { get;private set; }
         public string ZipCode { get;private set; }
         public string Line { get;private set; }
-
+              
       
 
         protected override IEnumerable<object> GetEqualityComponents()
