@@ -70,3 +70,4 @@ namespace FreeCourse.Services.Order.Domain.Core
                 return left.Equals(right);
         }
     }
+}
