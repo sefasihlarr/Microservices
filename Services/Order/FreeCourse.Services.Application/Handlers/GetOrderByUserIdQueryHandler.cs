@@ -32,7 +32,6 @@ namespace FreeCourse.Services.Application.Handlers
                 return ResponseDto<List<OrderDto>>.Success(new List<OrderDto>(),200);
             }
 
-
             var orderDto = ObjectMapper.Mapper.Map<List<OrderDto>>(orders);
             return ResponseDto<List<OrderDto>>.Success(orderDto, 200);
         }

@@ -24,12 +24,15 @@ namespace FreeCourse.Services.Order.Insfrastructure
             modelBuilder.Entity<Domain.OrderAggregate.Order>().ToTable("Orders", DEFAULT_SHAMA);
             modelBuilder.Entity<Domain.OrderAggregate.OrderItem>().ToTable("OrderItems", DEFAULT_SHAMA);
 
-            modelBuilder.Entity<Domain.OrderAggregate.OrderItem>().Property(x => x.Price).HasColumnType("decimal(18,2");
+          
+            modelBuilder.Entity<Domain.OrderAggregate.OrderItem>().Property(x => x.Price).HasColumnType("decimal(18,2)");
 
-            modelBuilder.Entity<Domain.OrderAggregate.Order>().OwnsOne(o => o.Address).WithOwner();
+     
+            modelBuilder.Entity<Domain.OrderAggregate.Order>().OwnsOne(o => o.Address);
 
             base.OnModelCreating(modelBuilder);
         }
+
 
 
     }
