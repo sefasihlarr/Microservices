@@ -6,6 +6,7 @@ Services
 	-orderAPI=>5015
 	-fakePaymentAPI=>5016
 	-Getway=>5000
+	-Web=>5010
 
 -IdentityServer=>5001
 	
