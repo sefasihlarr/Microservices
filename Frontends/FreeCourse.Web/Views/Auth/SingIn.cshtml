@@ -13,6 +13,7 @@
                 <h5 class="card-title">
                     Üye Girişi
                 </h5>
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                 <form asp-controller="Auth" asp-action="SingIn" method="post">
                     <div class="mb-3">
                         <label asp-for="Email" for="exampleInputEmail1" class="form-label"></label>
