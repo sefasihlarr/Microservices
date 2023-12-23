@@ -19,7 +19,7 @@ namespace FreeCourse.Web.Services
         private readonly ClientSettings _clientSettings;
         private readonly ServiceAPISettings _serviceApiSettings;
 
-        public IdentityService(HttpClient httpClient, IHttpContextAccessor contextAccessor,IOptions< ClientSettings> clientSettings,IOptions <ServiceAPISettings> serviceApiSettings)
+        public IdentityService(HttpClient httpClient, IHttpContextAccessor contextAccessor, IOptions<ClientSettings> clientSettings, IOptions<ServiceAPISettings> serviceApiSettings)
         {
             _httpClient = httpClient;
             _contextAccessor = contextAccessor;
@@ -27,9 +27,54 @@ namespace FreeCourse.Web.Services
             _serviceApiSettings = serviceApiSettings.Value;
         }
 
-        public Task<TokenResponse> GetAccessTokenByRefreshToken()
+        public async Task<TokenResponse> GetAccessTokenByRefreshToken()
         {
-            throw new NotImplementedException();
+            var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
+            {
+                Address = _serviceApiSettings.BaseUrl,
+                Policy = new DiscoveryPolicy { RequireHttps = false }
+            });
+
+            if (disco.IsError)
+            {
+                throw disco.Exception;
+            }
+
+            var refreshToken = await _contextAccessor.HttpContext.GetTokenAsync(OpenIdConnectParameterNames.RefreshToken);
+
+            RefreshTokenRequest refreshTokenRequest = new()
+            {
+                ClientId = _clientSettings.WebClientForUser.ClientId,
+                ClientSecret = _clientSettings.WebClientForUser.ClientSecret,
+                RefreshToken = refreshToken,
+                Address = disco.TokenEndpoint
+            };
+
+            var token = await _httpClient.RequestRefreshTokenAsync(refreshTokenRequest);
+            if (token.IsError)
+            {
+                return null;
+            }
+
+
+            var authhenticationTokens = new List<AuthenticationToken>()
+            {
+
+                new AuthenticationToken{Name = OpenIdConnectParameterNames.AccessToken,Value= token.AccessToken},
+                new AuthenticationToken{Name = OpenIdConnectParameterNames.RefreshToken,Value= token.RefreshToken},
+                new AuthenticationToken{Name = OpenIdConnectParameterNames.ExpiresIn,Value= DateTime.Now.AddSeconds(token.ExpiresIn).ToString("O",CultureInfo.InvariantCulture)}
+            };
+
+            var authenticationResut = await _contextAccessor.HttpContext.AuthenticateAsync();
+
+            var properties = authenticationResut.Properties;
+            properties.StoreTokens(authhenticationTokens);
+
+            await _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,authenticationResut.Principal,properties);
+
+
+            return token;
+
         }
 
         public Task RevokeRefreshToken()
@@ -67,7 +112,7 @@ namespace FreeCourse.Web.Services
                 //token içerisindeki hata mesajini alıyoruz
                 var responseContet = await token.HttpResponse.Content.ReadAsStringAsync();
 
-                var errorDto = JsonSerializer.Deserialize<ErrorDto>(responseContet,new JsonSerializerOptions
+                var errorDto = JsonSerializer.Deserialize<ErrorDto>(responseContet, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
@@ -89,7 +134,7 @@ namespace FreeCourse.Web.Services
                 throw userInfo.Exception;
             }
 
-            ClaimsIdentity claimsIdentity = new ClaimsIdentity(userInfo.Claims,CookieAuthenticationDefaults.AuthenticationScheme,"name","role");
+            ClaimsIdentity claimsIdentity = new ClaimsIdentity(userInfo.Claims, CookieAuthenticationDefaults.AuthenticationScheme, "name", "role");
 
             ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
