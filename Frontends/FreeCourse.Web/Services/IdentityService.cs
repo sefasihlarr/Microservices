@@ -31,7 +31,7 @@ namespace FreeCourse.Web.Services
         {
             var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
-                Address = _serviceApiSettings.BaseUrl,
+                Address = _serviceApiSettings.IdentityBaseUrl,
                 Policy = new DiscoveryPolicy { RequireHttps = false }
             });
 
@@ -77,16 +77,41 @@ namespace FreeCourse.Web.Services
 
         }
 
-        public Task RevokeRefreshToken()
+        public async Task RevokeRefreshToken()
         {
-            throw new NotImplementedException();
+            var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
+            {
+                Address = _serviceApiSettings.IdentityBaseUrl,
+                Policy = new DiscoveryPolicy { RequireHttps = false }
+            });
+
+            if (disco.IsError)
+            {
+                throw disco.Exception;
+            }
+
+
+            var refrershToken = await _contextAccessor.HttpContext.GetTokenAsync(OpenIdConnectParameterNames.RefreshToken);
+            TokenRevocationRequest tokenRevocationRequest = new()
+            {
+                ClientId = _clientSettings.WebClientForUser.ClientId,
+                ClientSecret = _clientSettings.WebClientForUser.ClientSecret,
+                Address = disco.RevocationEndpoint,
+                Token = refrershToken,
+                TokenTypeHint="refresh_token"
+            };
+
+
+            await _httpClient.RevokeTokenAsync(tokenRevocationRequest);
         }
+
+
 
         public async Task<ResponseDto<bool>> SingIn(SingInInput singInInput)
         {
             var disco = await _httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
-                Address = _serviceApiSettings.BaseUrl,
+                Address = _serviceApiSettings.IdentityBaseUrl,
                 Policy = new DiscoveryPolicy { RequireHttps = false }
             });
 
@@ -156,8 +181,6 @@ namespace FreeCourse.Web.Services
 
 
             return ResponseDto<bool>.Success(200);
-
-
 
 
         }
