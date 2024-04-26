@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj": {}
+    "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj": {
+    "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj",
+        "projectUniqueName": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj",
         "projectName": "FreeCourse.IdentityServer",
-        "projectPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj",
-        "packagesPath": "C:\\Users\\metaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\obj\\",
+        "projectPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\FreeCourse.IdentityServer.csproj",
+        "packagesPath": "C:\\Users\\ortak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\IdentityServer\\FreeCourse.IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\metaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ortak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -90,24 +95,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -116,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

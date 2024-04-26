@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C789D3E-974E-41AE-AE74-E9CB320A8EEE}"
 	ProjectSection(SolutionItems) = preProject
 		.ignore = .ignore
+		docker-compose.yml = docker-compose.yml
 		Ports.txt = Ports.txt
 	EndProjectSection
 EndProject
@@ -57,7 +58,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Getway", "FreeCo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{673728F8-8104-4C8D-99FF-E7B373A365E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Web", "Frontends\FreeCourse.Web\FreeCourse.Web.csproj", "{B4874AEC-FD1E-46A3-ACD9-9112D0CFDD67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Web", "Frontends\FreeCourse.Web\FreeCourse.Web.csproj", "{B4874AEC-FD1E-46A3-ACD9-9112D0CFDD67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

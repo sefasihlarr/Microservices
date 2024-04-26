@@ -1006,19 +1006,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\metaa\\.nuget\\packages\\": {}
+    "C:\\Users\\ortak\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\Discount\\FreeCourse.Services.Discount\\FreeCourse.Services.Discount.csproj",
+      "projectUniqueName": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Services\\Discount\\FreeCourse.Services.Discount\\FreeCourse.Services.Discount.csproj",
       "projectName": "FreeCourse.Services.Discount",
-      "projectPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\Discount\\FreeCourse.Services.Discount\\FreeCourse.Services.Discount.csproj",
-      "packagesPath": "C:\\Users\\metaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\Discount\\FreeCourse.Services.Discount\\obj\\",
+      "projectPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Services\\Discount\\FreeCourse.Services.Discount\\FreeCourse.Services.Discount.csproj",
+      "packagesPath": "C:\\Users\\ortak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Services\\Discount\\FreeCourse.Services.Discount\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\metaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ortak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1032,8 +1032,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj": {
-              "projectPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj"
+            "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj": {
+              "projectPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj"
             }
           }
         }
@@ -1042,6 +1042,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1088,8 +1093,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.10.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

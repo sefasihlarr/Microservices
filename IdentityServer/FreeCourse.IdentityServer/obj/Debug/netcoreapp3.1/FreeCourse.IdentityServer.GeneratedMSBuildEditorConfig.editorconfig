@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = FreeCourse.IdentityServer
-build_property.ProjectDir = C:\Users\metaa\Masaüstü\MicroServiceDevelopment\MicroservicesUdemy\Microservices\IdentityServer\FreeCourse.IdentityServer\
+build_property.ProjectDir = C:\Users\ortak\Masaüstü\Feature\Microservices\IdentityServer\FreeCourse.IdentityServer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

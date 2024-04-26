@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FreeCourse.Services.Basket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fb6d925629c57794daf386cd08e6af90c03ad95")]
 [assembly: System.Reflection.AssemblyProductAttribute("FreeCourse.Services.Basket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FreeCourse.Services.Basket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

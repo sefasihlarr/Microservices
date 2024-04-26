@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UcN5+CnPq6UumCiRIRUSGas6VbxIqW0jIwowrxPvftigt3WQvV14V8o9XpqncmAYOuKQGerxy/dTVx7xAivsIg==",
+  "dgSpecHash": "Wi6bgSZZ+Yk2xMfo5TOGjQZktfOCZaeWK3DXKpd7SvbcMdVtAUFU3PAo20JSPgl+52fdZHZU4oZcUKJrsHK0pw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj",
+  "projectFilePath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

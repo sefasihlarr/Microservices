@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\metaa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\metaa\\.nuget\\packages"
+      "C:\\Users\\ortak\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ortak\\.nuget\\packages"
     ]
   }
 }

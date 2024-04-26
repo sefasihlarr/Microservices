@@ -860,19 +860,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\metaa\\.nuget\\packages\\": {}
+    "C:\\Users\\ortak\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\FreeCourse.Services.PhotoStock.csproj",
+      "projectUniqueName": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\FreeCourse.Services.PhotoStock.csproj",
       "projectName": "FreeCourse.Services.PhotoStock",
-      "projectPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\FreeCourse.Services.PhotoStock.csproj",
-      "packagesPath": "C:\\Users\\metaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\obj\\",
+      "projectPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\FreeCourse.Services.PhotoStock.csproj",
+      "packagesPath": "C:\\Users\\ortak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Services\\PhotoStock\\FreeCourse.Services.PhotoStock\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\metaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ortak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -886,8 +886,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj": {
-              "projectPath": "C:\\Users\\metaa\\Masaüstü\\MicroServiceDevelopment\\MicroservicesUdemy\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj"
+            "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj": {
+              "projectPath": "C:\\Users\\ortak\\Masaüstü\\Feature\\Microservices\\Shared\\FreeCourse.Shared\\FreeCourse.Shared.csproj"
             }
           }
         }
@@ -896,6 +896,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -930,7 +935,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
